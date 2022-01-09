@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>02.05.this.props</title>
+    <title>02.06.props.functional</title>
     <meta charset="utf-8">
 </head>
 
@@ -14,10 +14,8 @@
     <script src="react/react-dom.js"></script>
     <script src="react/babel.js"></script>
     <script type="text/babel">
-        class MyComponent extends React.Component {
-            render() {
-                return <span>My name is <em>{this.props.name}</em></span>;
-            }
+        const MyComponent = function (props) {
+            return <span>My name is <em>{props.name}</em></span>
         }
         ReactDOM.render(
             <MyComponent name="Bob" />,
